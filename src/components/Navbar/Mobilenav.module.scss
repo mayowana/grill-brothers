@@ -1,0 +1,63 @@
+// VARIABLES
+
+$background-color: #edeae0;
+$supporting-color: #d4c79e;
+$font-color: black;
+$nav-color: white;
+$hover-color: red;
+$home-button: green;
+$home-hover: lighten($home-button, 25%);
+$color-1: #b79492;
+$color-1a: lighten($color-1, 10%);
+$color-1b: lighten($color-1, 20%);
+$color-2: #917c78;
+$color-2a: lighten($color-2, 10%);
+$color-2b: lighten($color-2, 20%);
+$color-3: #545e56;
+$color-3a: lighten($color-3, 10%);
+$color-3b: lighten($color-3, 20%);
+$modal: calc(100vh - 3.5rem);
+
+.navbox {
+  z-index: 1000;
+}
+.navmenu {
+    display: block;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+
+    li {
+        display: inline-block;
+        margin-left: 2rem;
+    
+        a {
+          text-decoration: none;
+          color: $nav-color;
+          cursor: pointer;
+          font-size: 1.2rem;
+        }
+    
+        a:hover {
+          color: $hover-color;
+        }
+      }
+  }
+
+.navmenu.show {
+    display: block;
+}
+
+  .navlist {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8rem;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+  }

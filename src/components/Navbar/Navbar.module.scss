@@ -1,0 +1,255 @@
+// VARIABLES
+
+$background-color: #edeae0;
+$supporting-color: #d4c79e;
+$font-color: black;
+$nav-color: white;
+$hover-color: red;
+$home-button: green;
+$home-hover: lighten($home-button, 25%);
+$color-1: #b79492;
+$color-1a: lighten($color-1, 10%);
+$color-1b: lighten($color-1, 20%);
+$color-2: #917c78;
+$color-2a: lighten($color-2, 10%);
+$color-2b: lighten($color-2, 20%);
+$color-3: #545e56;
+$color-3a: lighten($color-3, 10%);
+$color-3b: lighten($color-3, 20%);
+$modal: calc(100vh - 3.5rem);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    height: $modal;
+    width: 100vw;
+    background-image: linear-gradient($background-color, $supporting-color);
+  }
+  
+  .navbox {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    height: 3.5rem;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .mobilenav {
+      display: none;
+  }
+  
+  .logo {
+    height: 3.5rem;
+  }
+  
+  .navmenu {
+    li {
+      display: inline-block;
+      margin-left: 2rem;
+  
+      a {
+        text-decoration: none;
+        color: $nav-color;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+  
+      a:hover {
+        color: $hover-color;
+      }
+    }
+  }
+  
+  .fashoppingcart {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+  }
+
+  .fabars {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .alert {
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    top: -14px;
+    right: -28px;
+    padding: 0.25rem 0.4rem;
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  .headcontent {
+    height: $modal;
+    color: $font-color;
+    display: flex;
+    margin-top: 3.5rem;
+    justify-content: center;
+  
+    .headimage {
+      width: 40%;
+  
+      img {
+        height: 70%;
+        filter: brightness(120%) drop-shadow(8px 8px 10px black);
+        position: relative;
+        top: 7rem;
+      }
+    }
+  
+    h1 {
+      font-size: 400%;
+      font-family: 'Balsamiq Sans';
+      margin: 0;
+    }
+
+    h1:last-of-type {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .headtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 100%;
+    font-weight: bold;
+    color: $font-color;
+    cursor: pointer;
+  }
+  
+  .ordernow {
+    @extend .button;
+    background-color: $home-button;
+    width: 30%;
+    color: black;
+    font-weight: bold;
+  
+    &:hover {
+      background-color: $home-hover;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .headcontent {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    
+      .headimage {
+        height: 50%;
+    
+    
+        img {
+          height: 50%;
+          position: absolute;
+          left: 3.5rem;
+        }
+      }
+    
+      h1 {
+        font-size: 300%;
+      }
+    }
+
+    .ordernow {
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .navbox {
+      z-index: 1000;
+    }
+
+    .navmenu {
+      display: none;
+      position: absolute;
+      width: 100%;
+      transform: translateY(-70%);
+    }
+
+    .navlist {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 8rem;
+      background-color: black;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-right: 1.5rem;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .mobilenav {
+        display: inline;
+    }
+
+    .fashoppingcart {
+        font-size: 1.5rem;
+    }
+
+    .alert {
+        font-size: 0.75rem;
+    }
+
+    .headcontent {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    
+      .headimage {
+        height: 35%;
+    
+    
+        img {
+          height: 35%;
+          position: absolute;
+          left: 2rem;
+        }
+      }
+    
+      h1 {
+        font-size: 200%;
+      }
+    }
+
+    .ordernow {
+      margin: 0 auto;
+      text-align: center;
+      width: 60%;
+    }
+  }

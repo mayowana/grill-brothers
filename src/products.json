@@ -1,0 +1,85 @@
+{
+    "meals": [
+        {
+            "_id": "001",
+            "name": "Chicken",
+            "group": "Protein",
+            "description": "2 pcs",
+            "price": 1000,
+            "image": "/components/Menu/assets/meal-1.png"
+        },
+
+        {
+            "_id": "002",
+            "name": "Turkey",
+            "group": "Protein",
+            "description": "2 pcs",
+            "price": 1000,
+            "image": "/components/Menu/assets/meal-2.png"
+        },
+
+        {
+            "_id": "003",
+            "name": "Wings",
+            "group": "Protein",
+            "description": "5 pcs",
+            "price": 1200,
+            "image": "/components/Menu/assets/meal-3.png"
+        },
+
+        {
+            "_id": "004",
+            "name": "Potato",
+            "group": "Sides",
+            "description": "",
+            "price": 500,
+            "image": "/components/Menu/assets/meal-4.png"
+        },
+
+        {
+            "_id": "005",
+            "name": "Yam",
+            "group": "Sides",
+            "description": "",
+            "price": 500,
+            "image": "/components/Menu/assets/meal-5.png"
+        },
+
+        {
+            "_id": "006",
+            "name": "Plantain",
+            "group": "Sides",
+            "description": "",
+            "price": 500,
+            "image": "/components/Menu/assets/meal-6.png"
+        },
+
+        {
+            "_id": "007",
+            "name": "Relish Cheese Burger",
+            "group": "Burgers",
+            "description": "Contains patty, onions, cheese, bacon, lettuce & sauce",
+            "price": 1300,
+            "image": "/components/Menu/assets/meal-7.png"
+        },
+
+        {
+            "_id": "008",
+            "name": "Relish Burger Meal",
+            "group": "Burgers",
+            "description": "Contains burger, one side, 5x wings, corn and sauce",
+            "price": 3500,
+            "image": "/components/Menu/assets/meal-8.png"
+        },
+
+        {
+            "_id": "009",
+            "name": "Relish Burger Tray",
+            "group": "Burgers",
+            "description": "Contains 2 burgers, one side, 10x wings, corn and sauce",
+            "price": 6000,
+            "image": "/components/Menu/assets/meal-9.png"
+        }
+
+    ]
+}

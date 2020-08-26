@@ -1,0 +1,44 @@
+// VARIABLES
+
+$background-color: #edeae0;
+$supporting-color: #d4c79e;
+$font-color: black;
+$nav-color: white;
+$hover-color: red;
+$home-button: green;
+$home-hover: lighten($home-button, 25%);
+$color-1: #b79492;
+$color-1a: lighten($color-1, 10%);
+$color-1b: lighten($color-1, 20%);
+$color-2: #917c78;
+$color-2a: lighten($color-2, 10%);
+$color-2b: lighten($color-2, 20%);
+$color-3: #545e56;
+$color-3a: lighten($color-3, 10%);
+$color-3b: lighten($color-3, 20%);
+$modal: calc(100vh - 3.5rem);
+
+.carttable {
+    width: 30%;
+  height: $modal;
+  background-color: black;
+  color: $nav-color;
+  top: 3.5rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .carttable {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .carttable {
+        width: 100%;
+    }
+}
