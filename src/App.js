@@ -1,17 +1,23 @@
 import React from 'react';
-import Menu from './components/Menu/Menu';
 import Navbar from './components/Navbar/Navbar'
-import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
+import {Provider} from 'react-redux'
+import store from './redux/store'
+import MenuItems from './components/Menu/Menu'
 
 library.add(faShoppingCart, faBars)
 
 function App() {
   return (
+    <>
+    <Provider store={store}>
     <div>
       <Navbar></Navbar>
+      <MenuItems />
     </div>
+    </Provider>
+    </>
   );
 }
 

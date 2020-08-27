@@ -69,7 +69,7 @@
             "group": "Burgers",
             "description": "Contains burger, one side, 5x wings, corn and sauce",
             "price": 3500,
-            "image": "/components/Menu/assets/meal-8.png"
+            "image": "/src/components/Menu/assets/meal-8.png"
         },
 
         {
@@ -77,8 +77,8 @@
             "name": "Relish Burger Tray",
             "group": "Burgers",
             "description": "Contains 2 burgers, one side, 10x wings, corn and sauce",
-            "price": 6000,
-            "image": "/components/Menu/assets/meal-9.png"
+            "price": 7500,
+            "image": "src\\components\\Menu\\assets\\meal-9.png"
         }
 
     ]
