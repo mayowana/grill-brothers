@@ -7,9 +7,11 @@ const MenuItem = ({image, name, price}) => {
         <>
         <div className={styles.menuitem}>
             <img src={image} alt={name}></img>
-            <div>
-                <h4>{name}</h4>
+            <div className={styles.details}>
+                <div><h4>{name}</h4>
                 <p>₦{price}</p>
+                </div>
+                <button>ADD TO CART</button>
             </div>
         </div>
         </>
