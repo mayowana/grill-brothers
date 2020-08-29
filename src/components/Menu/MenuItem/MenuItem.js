@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './MenuItem.module.scss'
 
-const MenuItem = ({image, name, price}) => {
+const MenuItem = ({image, name, price, clicked}) => {
 
     return (
         <>
@@ -11,7 +11,7 @@ const MenuItem = ({image, name, price}) => {
                 <div><h4>{name}</h4>
                 <p>₦{price}</p>
                 </div>
-                <button>ADD TO CART</button>
+                <button onClick={clicked}>ADD TO CART</button>
             </div>
         </div>
         </>

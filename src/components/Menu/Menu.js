@@ -1,42 +1,51 @@
 import React, { useState } from "react";
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import MenuItem from './MenuItem/MenuItem'
 import styles from './Menu.module.scss'
+import {addToCartAction} from '../../redux/actions/cartActions'
 
 const MenuItems = () => {
 const meal = useSelector(state => state.menuReducer);
-console.log(meal.meals);
+const dispatch = useDispatch();
+
+const addToCart = (meals) => {
+
+}
 
 
-const protmeals = meal.meals.protein.map((meals, index) => (
-  <MenuItem key={index}
+const protmeals = meal.meals.protein.map((meals) => (
+  <MenuItem key={meals.id}
   name={meals.name}
   image={meals.image}
-  price={meals.price}>
+  price={meals.price}
+  clicked={addToCart}>
   </MenuItem>
 ));
 
-const sidemeals = meal.meals.sides.map((meals, index) => (
-  <MenuItem key={index}
+const sidemeals = meal.meals.sides.map((meals) => (
+  <MenuItem key={meals.id}
   name={meals.name}
   image={meals.image}
-  price={meals.price}>
+  price={meals.price}
+  clicked={addToCart}>
   </MenuItem>
 ));
 
-const burgmeals = meal.meals.burgers.map((meals, index) => (
-  <MenuItem key={index}
+const burgmeals = meal.meals.burgers.map((meals) => (
+  <MenuItem key={meals.id}
   name={meals.name}
   image={meals.image}
-  price={meals.price}>
+  price={meals.price}
+  clicked={addToCart}>
   </MenuItem>
 ));
 
-const traymeals = meal.meals.trays.map((meals, index) => (
-  <MenuItem key={index}
+const traymeals = meal.meals.trays.map((meals) => (
+  <MenuItem key={meals.id}
   name={meals.name}
   image={meals.image}
-  price={meals.price}>
+  price={meals.price}
+  clicked={addToCart}>
   </MenuItem>
 ));
     return (

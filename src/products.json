@@ -79,6 +79,51 @@
             "description": "Contains 2 burgers, one side, 10x wings, corn and sauce",
             "price": 7500,
             "image": "src\\components\\Menu\\assets\\meal-9.png"
+        },
+
+        {
+            "_id": "012",
+            "name": "Asun Tray",
+            "group": "Trays",
+            "description": "A full tray of fresh goat meat",
+            "price": 25000,
+            "image": "https://firebasestorage.googleapis.com/v0/b/grill-brothers.appspot.com/o/asun.jpg?alt=media&token=28c3dde5-e255-4808-a4ec-49855d694fc7"
+        },
+        
+        {
+            "_id": "013",
+            "name": "Half Turkey Tray",
+            "group": "Trays",
+            "description": "A half tray of Turkey",
+            "price": 14000,
+            "image": "https://firebasestorage.googleapis.com/v0/b/grill-brothers.appspot.com/o/half%20turkey.jpg?alt=media&token=bc848c6a-f245-42a2-b275-d1c13884aecd"
+        },
+        
+        {
+            "_id": "014",
+            "name": "Full Turkey Tray",
+            "group": "Trays",
+            "description": "A full tray of Turkey",
+            "price": 28000,
+            "image": "https://firebasestorage.googleapis.com/v0/b/grill-brothers.appspot.com/o/turkey.jpg?alt=media&token=0f7997bb-aa36-45f1-ba31-33e1035d3626"
+        },
+        
+        {
+            "_id": "015",
+            "name": "Half Chicken Tray",
+            "group": "Trays",
+            "description": "A half tray of Chicken",
+            "price": 13000,
+            "image": "https://firebasestorage.googleapis.com/v0/b/grill-brothers.appspot.com/o/half%20chicken.jpg?alt=media&token=e681864f-2dff-4684-8e36-da90526ce861"
+        },
+        
+        {
+            "_id": "016",
+            "name": "Full Chicken Tray",
+            "group": "Trays",
+            "description": "A full tray of Chicken",
+            "price": 26000,
+            "image": "https://firebasestorage.googleapis.com/v0/b/grill-brothers.appspot.com/o/chicken.jpg?alt=media&token=7baa967d-baf6-4ef4-9a1f-ddf105ca034f"
         }
 
     ]
