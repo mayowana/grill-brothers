@@ -8,8 +8,11 @@ const MenuItems = () => {
 const meal = useSelector(state => state.menuReducer);
 const dispatch = useDispatch();
 
-const addToCart = (meals) => {
+const [cart, setCart] = useState([]);
+console.log(cart)
 
+const addToCart = (e) => {
+  setCart([...cart, e]);
 }
 
 
@@ -18,7 +21,7 @@ const protmeals = meal.meals.protein.map((meals) => (
   name={meals.name}
   image={meals.image}
   price={meals.price}
-  clicked={addToCart}>
+  clicked={() => addToCart(meals)}>
   </MenuItem>
 ));
 
@@ -27,7 +30,7 @@ const sidemeals = meal.meals.sides.map((meals) => (
   name={meals.name}
   image={meals.image}
   price={meals.price}
-  clicked={addToCart}>
+  clicked={() => addToCart(meals)}>
   </MenuItem>
 ));
 
@@ -36,7 +39,7 @@ const burgmeals = meal.meals.burgers.map((meals) => (
   name={meals.name}
   image={meals.image}
   price={meals.price}
-  clicked={addToCart}>
+  clicked={() => addToCart(meals)}>
   </MenuItem>
 ));
 
@@ -45,7 +48,7 @@ const traymeals = meal.meals.trays.map((meals) => (
   name={meals.name}
   image={meals.image}
   price={meals.price}
-  clicked={addToCart}>
+  clicked={() => addToCart(meals)}>
   </MenuItem>
 ));
     return (
