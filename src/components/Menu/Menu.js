@@ -2,18 +2,29 @@ import React, { useState } from "react";
 import {useSelector, useDispatch} from 'react-redux'
 import MenuItem from './MenuItem/MenuItem'
 import styles from './Menu.module.scss'
-import {addToCartAction} from '../../redux/actions/cartActions'
+import {addToCartAction} from '../../redux/actions/cartActions';
+import Backdrop from '../Backdrop/Backdrop'
 
 const MenuItems = () => {
 const meal = useSelector(state => state.menuReducer);
 const dispatch = useDispatch();
 
 const [cart, setCart] = useState([]);
+const [showBack, setShowBack] = useState(false);
+const [error, setError] = useState('');
+
 console.log(cart)
 
-const addToCart = (e) => {
-  setCart([...cart, e]);
-}
+const addToCart = (meals) => {
+  let addIt = true;
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === meals.id) addIt = false;
+    }
+    if (addIt) {
+      setCart([...cart, meals]);
+    } else setShowBack(true);
+    setError(meals.name);
+  }
 
 
 const protmeals = meal.meals.protein.map((meals) => (
@@ -53,6 +64,8 @@ const traymeals = meal.meals.trays.map((meals) => (
 ));
     return (
     <>
+      { showBack ? <Backdrop /> : null}
+      { showBack ? <div className={styles.modal}> <p> {error} is already in your cart</p> <button onClick={() => setShowBack(false)}>CLOSE</button></div> : null};
       <div className={styles.menuclass}>
         <h3>OUR MENU</h3>
         <h4>Protein</h4>
