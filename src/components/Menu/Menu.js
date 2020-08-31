@@ -9,11 +9,11 @@ const MenuItems = () => {
 const meal = useSelector(state => state.menuReducer);
 const dispatch = useDispatch();
 
-const [cart, setCart] = useState([]);
+const cart = useSelector(state => state.cartReducer);
+console.log(cart);
+
 const [showBack, setShowBack] = useState(false);
 const [error, setError] = useState('');
-
-console.log(cart)
 
 const addToCart = (meals) => {
   let addIt = true;
@@ -21,7 +21,7 @@ const addToCart = (meals) => {
       if (cart[i].id === meals.id) addIt = false;
     }
     if (addIt) {
-      setCart([...cart, meals]);
+      dispatch(addToCartAction(meals))
     } else setShowBack(true);
     setError(meals.name);
   }

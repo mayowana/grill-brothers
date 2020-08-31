@@ -1,6 +1,5 @@
 const INITIAL_STATE = {
     cart: [],
-    price: [],
     totalPrice: 0
 }
 
@@ -11,7 +10,6 @@ const cartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 cart: [...state.cart, payload.meal],
-                price: [...state.cart, payload.price],
                 totalPrice: state.price + payload.price
             }
     } 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./CartTable.module.scss";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
@@ -11,6 +11,18 @@ const CartTable = () => {
     let hardCopy = [...cart];
     hardCopy = hardCopy.filter((cartItem) => cartItem.id !== meals.id);
     //setCart(hardCopy);
+  };
+
+  useEffect(() => {
+    total();
+  }, [cart]);
+
+  const total = () => {
+    let totalVal = 0;
+    for (let i = 0; i < cart.length; i++) {
+      totalVal += cart[i].price;
+    }
+    //setCartTotal(totalVal);
   };
 
   const orders = cart.map((meals) => (
