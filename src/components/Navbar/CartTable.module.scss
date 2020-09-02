@@ -45,6 +45,14 @@ $modal: calc(100vh - 3.5rem);
     text-align: left;
 }
 
+.total {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 1024px) {
     
     .carttable {
