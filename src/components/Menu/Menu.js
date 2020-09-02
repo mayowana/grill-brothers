@@ -9,7 +9,7 @@ const MenuItems = () => {
 const meal = useSelector(state => state.menuReducer);
 const dispatch = useDispatch();
 
-const cart = useSelector(state => state.cartReducer);
+const cart = useSelector(state => state.cartReducer.cart);
 console.log(cart);
 
 const [showBack, setShowBack] = useState(false);

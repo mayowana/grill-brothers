@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styles from "./CartTable.module.scss";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
@@ -25,19 +25,30 @@ const CartTable = () => {
     //setCartTotal(totalVal);
   };
 
-  const orders = cart.map((meals) => (
+  const orders = cart.map((el) => (
     <CartItem
-      key={meals.id}
-      meal={meals.name}
-      price={meals.price}
-      clicked={() => removeFromCart(meals)}
+      key={el.id}
+      meal={el.name}
+      price={el.price}
+      clicked={() => removeFromCart(el)}
     ></CartItem>
   ));
 
   return (
     <>
       <div className={styles.carttable}>
-        {cart.length == 0 ? <p>Your cart is empty</p> : <p>orders</p>}
+        {cart.length == 0 ? (
+          <p>Your cart is empty</p>
+        ) : (
+          <div>
+          <div className={styles.headings}>
+                <h4 className={styles.name}>Meal</h4>
+                <h4 className={styles.price}>Price</h4>
+                <div></div>
+                </div>
+            {orders}
+        </div>
+        )}
       </div>
     </>
   );

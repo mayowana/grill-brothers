@@ -30,6 +30,21 @@ $modal: calc(100vh - 3.5rem);
   z-index: 3;
 }
 
+.name {
+    width: 50%;
+    padding-bottom: 1rem;
+}
+
+.price {
+    width: 40%;
+}
+
+.headings {
+    margin-top: 2rem;
+    display: flex;
+    text-align: left;
+}
+
 @media only screen and (max-width: 1024px) {
     
     .carttable {
