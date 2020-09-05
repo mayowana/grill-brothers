@@ -6,25 +6,13 @@ import {removeFromCartAction} from '../../redux/actions/cartActions'
 
 const CartTable = () => {
   const cart = useSelector((state) => state.cartReducer.cart);
-  const [cartTotal, setCartTotal] = useState(0);
-  console.log(cart);
+  const cartTotal = useSelector((state) => state.cartReducer.cartTotal);
+  
 
   const dispatch = useDispatch();
 
   const removeFromCart = (meals) => {
     dispatch(removeFromCartAction(meals, cart));
-  };
-
-  useEffect(() => {
-    total();
-  }, [cart]);
-
-  const total = () => {
-    let totalVal = 0;
-    for (let i = 0; i < cart.length; i++) {
-      totalVal += cart[i].price;
-    }
-    setCartTotal(totalVal);
   };
 
   const orders = cart.map((el) => (
@@ -50,6 +38,7 @@ const CartTable = () => {
                 </div>
             {orders}
             <div className={styles.total}><h4>Total:</h4> <h4>₦{cartTotal}</h4></div>
+            <div className={styles.checkout}><button>PROCEED TO CHECKOUT</button></div>
         </div>
         )}
         </div>

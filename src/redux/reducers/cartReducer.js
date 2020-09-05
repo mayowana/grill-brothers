@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   cart: [],
+  cartTotal: 0,
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -8,12 +9,14 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case "ADD_TO_CART":
       return {
         ...state,
-        cart: [...state.cart, payload.meals],
+        cart: payload.newCart,
+        cartTotal: payload.newTotal
       };
     case "REMOVE_FROM_CART":
       return {
         ...state,
-        cart: payload,
+        cart: payload.newCart,
+        cartTotal: payload.newTotal
       };
   }
   return state;

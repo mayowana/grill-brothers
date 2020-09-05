@@ -21,7 +21,7 @@ const addToCart = (meals) => {
       if (cart[i].id === meals.id) addIt = false;
     }
     if (addIt) {
-      dispatch(addToCartAction(meals))
+      dispatch(addToCartAction(cart, meals))
     } else setShowBack(true);
     setError(meals.name);
   }
