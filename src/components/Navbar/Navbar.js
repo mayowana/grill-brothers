@@ -5,7 +5,6 @@ import header from './assets/header.png'
 import Mobilemenu from './Mobilemenu';
 import CartModal from './CartModal';
 
-
 class Navbar extends React.Component {
 
     render () {
@@ -49,7 +48,9 @@ class Navbar extends React.Component {
             </div>
 
                 </header>
+                
             </>
+            
         )
     }
 }

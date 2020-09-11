@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./CartTable.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import CartItem from "./CartItem";
@@ -27,7 +27,7 @@ const CartTable = () => {
   return (
     <>
       <div className={styles.carttable}>
-        {cart.length == 0 ? (
+        {cart.length === 0 ? (
           <p>Your cart is empty</p> 
         ) : (
           <div>

@@ -1,0 +1,51 @@
+form {
+    border: 2px solid black;
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    
+    input
+     {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    select
+     {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    label {
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        padding: 0.6rem;
+        border: none;
+        color: white;
+    }
+
+    .back {
+        @extend button;
+        background-color: red;
+    }
+
+    .pay {
+        @extend button;
+        background-color: green;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}

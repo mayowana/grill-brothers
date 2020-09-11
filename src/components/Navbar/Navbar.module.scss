@@ -155,7 +155,15 @@ header {
   }
 
   @media only screen and (max-width: 1200px) {
-
+    .headcontent {
+      
+      
+      .headimage {
+        img {
+      height: 50%;
+    }
+  }
+  }
   }
 
   @media only screen and (max-width: 1024px) {
@@ -182,10 +190,25 @@ header {
 
     .ordernow {
       margin: 0 auto;
+      width: 40%;
     }
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 992px) {
+    
+    
+    .headcontent {
+      
+      
+      .headimage {
+        img {
+      left: 23%;
+    }
+  }
+  }
+  }
+
+  @media only screen and (max-width: 768px) {
 
     .navbox {
       z-index: 1000;
@@ -251,5 +274,35 @@ header {
       margin: 0 auto;
       text-align: center;
       width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .headcontent {
+
+    
+      .headimage {
+    
+        img {
+          height: 45%;
+          position: absolute;
+          left: 10%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .headcontent {
+
+    
+      .headimage {
+    
+        img {
+          height: 40%;
+          position: absolute;
+          left: 10%;
+        }
+      }
     }
   }

@@ -39,3 +39,33 @@
         margin: 0;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .menuitem {
+        width: 28%;
+        height: 15%;
+
+        img {
+            height: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 600px) {
+
+    .menuitem {
+        width: 70%;
+        height: 15%;
+}
+}

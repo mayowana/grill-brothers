@@ -12,10 +12,13 @@ function App() {
   return (
     <>
     <Provider store={store}>
+
     <div>
-      <Navbar></Navbar>
-      <MenuItems />
+    <Navbar />
+    <MenuItems />
+
     </div>
+
     </Provider>
     </>
   );
